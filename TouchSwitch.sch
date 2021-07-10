@@ -1,0 +1,319 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Touch Switch"
+Date "2021-07-09"
+Rev "V1.0"
+Comp "https://github.com/KimiakiK"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TouchSwitch:TTP223 U1
+U 1 1 611369C9
+P 7750 3750
+F 0 "U1" H 7750 4050 50  0000 C CNN
+F 1 "TTP223" H 7750 3950 50  0000 C CNN
+F 2 "TouchSwitch:SOT-23-6" H 7750 3750 50  0001 C CNN
+F 3 "" H 7750 3750 50  0001 C CNN
+	1    7750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Mini J1
+U 1 1 61137682
+P 3450 3800
+F 0 "J1" H 3450 4250 50  0000 C CNN
+F 1 "USB_B_Mini" H 3450 4150 50  0000 C CNN
+F 2 "TouchSwitch:UX60SC-MB-5ST" H 3600 3750 50  0001 C CNN
+F 3 "~" H 3600 3750 50  0001 C CNN
+	1    3450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 61138C3E
+P 4100 3600
+F 0 "F1" V 3900 3600 50  0000 C CNN
+F 1 "ResettableFuse" V 4000 3600 50  0000 C CNN
+F 2 "TouchSwitch:1608Metric" H 4150 3400 50  0001 L CNN
+F 3 "~" H 4100 3600 50  0001 C CNN
+	1    4100 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky D3
+U 1 1 611391F2
+P 4750 3600
+F 0 "D3" H 4750 3400 50  0000 C CNN
+F 1 "SchottkyDiode" H 4750 3500 50  0000 C CNN
+F 2 "TouchSwitch:D_TUMD2" H 4750 3600 50  0001 C CNN
+F 3 "~" H 4750 3600 50  0001 C CNN
+	1    4750 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61139985
+P 5500 3900
+F 0 "C1" H 5615 3946 50  0000 L CNN
+F 1 "0.1uF" H 5615 3855 50  0000 L CNN
+F 2 "TouchSwitch:1608Metric" H 5538 3750 50  0001 C CNN
+F 3 "~" H 5500 3900 50  0001 C CNN
+	1    5500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 61139E3E
+P 6850 3650
+F 0 "D1" H 6850 3550 50  0000 C CNN
+F 1 "LED" H 6850 3550 50  0001 C CNN
+F 2 "TouchSwitch:1608Metric" H 6850 3650 50  0001 C CNN
+F 3 "~" H 6850 3650 50  0001 C CNN
+	1    6850 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6113A764
+P 6550 3650
+F 0 "R1" V 6450 3650 50  0000 C CNN
+F 1 "R" V 6550 3650 50  0001 C CNN
+F 2 "TouchSwitch:1608Metric" V 6480 3650 50  0001 C CNN
+F 3 "~" H 6550 3650 50  0001 C CNN
+	1    6550 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 6113AD39
+P 5500 3600
+F 0 "#PWR05" H 5500 3450 50  0001 C CNN
+F 1 "+5V" H 5500 3750 50  0000 C CNN
+F 2 "" H 5500 3600 50  0001 C CNN
+F 3 "" H 5500 3600 50  0001 C CNN
+	1    5500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6113B368
+P 3450 4200
+F 0 "#PWR04" H 3450 3950 50  0001 C CNN
+F 1 "GND" H 3450 4050 50  0000 C CNN
+F 2 "" H 3450 4200 50  0001 C CNN
+F 3 "" H 3450 4200 50  0001 C CNN
+	1    3450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 6113BB1A
+P 5300 3600
+F 0 "TP3" H 5300 3800 50  0000 C CNN
+F 1 "TestPoint" H 5358 3627 50  0001 L CNN
+F 2 "TouchSwitch:TestPoint_THTPad_D1.6mm_Drill1.0mm" H 5500 3600 50  0001 C CNN
+F 3 "~" H 5500 3600 50  0001 C CNN
+	1    5300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 6113C694
+P 5200 3600
+F 0 "#FLG01" H 5200 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 3773 50  0001 C CNN
+F 2 "" H 5200 3600 50  0001 C CNN
+F 3 "~" H 5200 3600 50  0001 C CNN
+	1    5200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3600 3950 3600
+Wire Wire Line
+	4250 3600 4600 3600
+Wire Wire Line
+	5500 3600 5500 3750
+Connection ~ 5500 3600
+Wire Wire Line
+	5500 4050 5500 4200
+Connection ~ 3450 4200
+Wire Wire Line
+	3450 4200 3350 4200
+Wire Wire Line
+	5500 4200 5300 4200
+NoConn ~ 3750 3800
+NoConn ~ 3750 3900
+NoConn ~ 3750 4000
+$Comp
+L Connector:TestPoint TP4
+U 1 1 61144801
+P 5300 4200
+F 0 "TP4" H 5300 4400 50  0000 C CNN
+F 1 "TestPoint" H 5358 4227 50  0001 L CNN
+F 2 "TouchSwitch:TestPoint_THTPad_D1.6mm_Drill1.0mm" H 5500 4200 50  0001 C CNN
+F 3 "~" H 5500 4200 50  0001 C CNN
+	1    5300 4200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5300 4200
+Wire Wire Line
+	4900 3600 5200 3600
+Connection ~ 5200 3600
+Wire Wire Line
+	5200 3600 5300 3600
+Connection ~ 5300 3600
+Wire Wire Line
+	5300 3600 5500 3600
+Wire Wire Line
+	3450 4200 5300 4200
+$Comp
+L power:+5V #PWR03
+U 1 1 6114F20E
+P 8250 3500
+F 0 "#PWR03" H 8250 3350 50  0001 C CNN
+F 1 "+5V" H 8250 3650 50  0000 C CNN
+F 2 "" H 8250 3500 50  0001 C CNN
+F 3 "" H 8250 3500 50  0001 C CNN
+	1    8250 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7400 3850
+NoConn ~ 8100 3650
+Text Label 7400 3650 2    50   ~ 0
+SW_1
+Text Label 7400 3850 2    50   ~ 0
+PAD_1
+Wire Wire Line
+	8250 3500 8250 3750
+Wire Wire Line
+	8250 3850 8100 3850
+Wire Wire Line
+	8100 3750 8250 3750
+Connection ~ 8250 3750
+Wire Wire Line
+	8250 3750 8250 3850
+Wire Wire Line
+	7400 3750 7100 3750
+$Comp
+L power:+5V #PWR01
+U 1 1 61152A4D
+P 6400 3500
+F 0 "#PWR01" H 6400 3350 50  0001 C CNN
+F 1 "+5V" H 6400 3650 50  0000 C CNN
+F 2 "" H 6400 3500 50  0001 C CNN
+F 3 "" H 6400 3500 50  0001 C CNN
+	1    6400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3500 6400 3650
+Wire Wire Line
+	7000 3650 7200 3650
+$Comp
+L TouchSwitch:TTP223 U2
+U 1 1 611559FE
+P 7750 4350
+F 0 "U2" H 7750 4650 50  0000 C CNN
+F 1 "TTP223" H 7750 4550 50  0000 C CNN
+F 2 "TouchSwitch:SOT-23-6" H 7750 4350 50  0001 C CNN
+F 3 "" H 7750 4350 50  0001 C CNN
+	1    7750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 61155A08
+P 6850 4250
+F 0 "D2" H 6850 4150 50  0000 C CNN
+F 1 "LED" H 6850 4150 50  0001 C CNN
+F 2 "TouchSwitch:1608Metric" H 6850 4250 50  0001 C CNN
+F 3 "~" H 6850 4250 50  0001 C CNN
+	1    6850 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 61155A12
+P 6550 4250
+F 0 "R2" V 6450 4250 50  0000 C CNN
+F 1 "R" V 6550 4250 50  0001 C CNN
+F 2 "TouchSwitch:1608Metric" V 6480 4250 50  0001 C CNN
+F 3 "~" H 6550 4250 50  0001 C CNN
+	1    6550 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 61155A26
+P 7100 4600
+F 0 "#PWR02" H 7100 4350 50  0001 C CNN
+F 1 "GND" H 7100 4450 50  0000 C CNN
+F 2 "" H 7100 4600 50  0001 C CNN
+F 3 "" H 7100 4600 50  0001 C CNN
+	1    7100 4600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7400 4450
+NoConn ~ 8100 4250
+Text Label 7400 4250 2    50   ~ 0
+SW_2
+Text Label 7400 4450 2    50   ~ 0
+PAD_2
+Wire Wire Line
+	8250 4450 8100 4450
+Wire Wire Line
+	8100 4350 8250 4350
+Connection ~ 8250 4350
+Wire Wire Line
+	8250 4350 8250 4450
+Wire Wire Line
+	7400 4350 7100 4350
+Wire Wire Line
+	7100 4350 7100 4600
+Wire Wire Line
+	7000 4250 7200 4250
+Connection ~ 7100 4350
+Wire Wire Line
+	8250 3850 8250 4350
+Connection ~ 8250 3850
+Wire Wire Line
+	7100 3750 7100 4350
+Wire Wire Line
+	6400 3650 6400 4250
+Connection ~ 6400 3650
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61163BFE
+P 7200 3650
+F 0 "TP1" H 7200 3850 50  0000 C CNN
+F 1 "TestPoint" H 7258 3677 50  0001 L CNN
+F 2 "TouchSwitch:TestPoint_THTPad_D1.6mm_Drill1.0mm" H 7400 3650 50  0001 C CNN
+F 3 "~" H 7400 3650 50  0001 C CNN
+	1    7200 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 7200 3650
+Wire Wire Line
+	7200 3650 7400 3650
+$Comp
+L Connector:TestPoint TP2
+U 1 1 611646F3
+P 7200 4250
+F 0 "TP2" H 7200 4450 50  0000 C CNN
+F 1 "TestPoint" H 7258 4277 50  0001 L CNN
+F 2 "TouchSwitch:TestPoint_THTPad_D1.6mm_Drill1.0mm" H 7400 4250 50  0001 C CNN
+F 3 "~" H 7400 4250 50  0001 C CNN
+	1    7200 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7200 4250
+Wire Wire Line
+	7200 4250 7400 4250
+$EndSCHEMATC
